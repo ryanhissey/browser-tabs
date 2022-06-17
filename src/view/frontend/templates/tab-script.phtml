@@ -1,0 +1,27 @@
+<?php
+
+/** @var $block Hissey\BrowserTabs\Block\BrowserTabs */
+/** @var $escaper Magento\Framework\Escaper */
+
+?>
+<?php if ($block->getModuleEnabled()) : ?>
+    <script>
+        let activeTitle = document.title;
+        let inactiveTitle = "<?= $escaper->escapeHtml($block->getMessageText()); ?>";
+        let timeout = <?= $escaper->escapeHtml($block->getMessageTimeout()); ?>;
+
+        document.addEventListener("visibilitychange", function () {
+            function changeTabName() {
+                if (document.hidden) {
+                    document.title = inactiveTitle;
+                }
+            }
+
+            if (document.hidden) {
+                setTimeout(changeTabName, timeout);
+            } else {
+                document.title = activeTitle;
+            }
+        });
+    </script>
+<?php endif; ?>

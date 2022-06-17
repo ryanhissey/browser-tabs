@@ -1,0 +1,26 @@
+{
+  "name": "hissey/module-browser-tabs",
+  "version": "1.0.0",
+  "description": "Custom inactive browser tab messages",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "authors": [
+    {
+      "name": "Ryan Hissey",
+      "email": "ryan@hissey.dev"
+    }
+  ],
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "src/registration.php"
+    ],
+    "psr-4": {
+      "Hissey\\BrowserTabs\\": "src/"
+    }
+  }
+}

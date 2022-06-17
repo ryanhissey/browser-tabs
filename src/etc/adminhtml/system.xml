@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="hissey" translate="label" sortOrder="400">
+            <label>Hissey</label>
+        </tab>
+        <section id="browsertabs" sortOrder="40" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+            <label>Browser Tab Messages</label>
+            <tab>hissey</tab>
+            <resource>Hissey_BrowserTabs::config_hissey_browsertabs</resource>
+            <group id="setting" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>Browser Tab Messages Config</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Module Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Enable/Disable Module.</comment>
+                </field>
+                <field id="browsertab_message" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Browser Tab Message Text</label>
+                    <comment>This is the message that appears after the user has changed tabs.</comment>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="browsertab_timeout" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Browser Tab Timeout</label>
+                    <comment>This is the delay in milliseconds to when the message appears after the user has changed tabs.</comment>
+                    <validate>required-entry no-whitespace</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
+
+
+

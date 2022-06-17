@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <hissey>
+            <browsertabs>
+                <enable>1</enable>
+                <browsertab_message>We Miss You</browsertab_message>
+                <browsertab_timeout>300</browsertab_timeout>
+            </browsertabs>
+        </hissey>
+    </default>
+</config>
