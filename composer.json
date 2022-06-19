@@ -1,6 +1,6 @@
 {
   "name": "hissey/module-browser-tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom inactive browser tab messages",
   "type": "magento2-module",
   "require": {
